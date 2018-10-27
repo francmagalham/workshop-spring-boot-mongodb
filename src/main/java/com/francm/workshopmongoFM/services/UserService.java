@@ -1,0 +1,22 @@
+package com.francm.workshopmongoFM.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.francm.workshopmongoFM.domain.User;
+import com.francm.workshopmongoFM.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository repo;
+	
+	public List<User> findAll() {
+		return repo.findAll();
+		
+	}
+	
+}
